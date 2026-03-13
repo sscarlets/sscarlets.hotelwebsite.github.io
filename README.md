@@ -1,2 +1,2 @@
 # sscarlets.hotelwebsite.github.io
-Hotel website.
+Check in and check out guests at the Furchester Hotel
