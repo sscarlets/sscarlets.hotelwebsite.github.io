@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="hotel.js"></script>
+    <link rel="stylesheet" href="hotel.css"></head>
+<body>
+
+    <div class="furchester-header">
+      <img src="logo.jpg">
+      <h1>Hotel Management System</h1>
+    </div>
+      <!-------------------ROOM 1------------------->
+
+      <div class="hotel-floor">
+        <div class="room-container">
+        <img src="room1.jpg">
+        <h3 id="h31">Room 1</h3>
+        <div id="list1">
+        </div>
+        <p id="warn1"></p>
+        
+        <div class="controls">
+            <input id="add1">
+            <button id="addButton1" onclick="addGuest(1)">Add Person</button>
+            <input id="remove1"> 
+            <button id="removeButton1" onclick="removeGuest(1)">Remove Person</button>
+            <button id="lockButton1" onclick="lockRoom(1)">Lock Room</button>
+            <button onclick="clearAll(1)">Remove All Guests</button>
+            </div>
+        </div>
+    </div>
+
+      <!-------------------ROOM 2------------------->
+      <div class="hotel-floor">
+        <div class="room-container">
+        <img src="room2.jpg">
+        <h3 id="h32">Room 2</h3>
+        <div id="list2">
+        </div>
+        <p id="warn2"></p>
+        
+        <div class="controls">
+            <input id="add2">
+            <button id="addButton2" onclick="addGuest(2)">Add Person</button>
+            <input id="remove2"> 
+            <button id="removeButton2" onclick="removeGuest(2)">Remove Person</button>
+            <button id="lockButton2" onclick="lockRoom(2)">Lock Room</button>
+            <button onclick="clearAll(2)">Remove All Guests</button>
+            </div>
+        </div>
+    </div>
+
+      <!-------------------ROOM 3------------------->
+            <div class="hotel-floor">
+        <div class="room-container">
+        <img src="room3.jpg">
+        <h3 id="h33">Room 3</h3>
+        <div id="list3">
+        </div>
+        <p id="warn3"></p>
+        
+        <div class="controls">
+            <input id="add3">
+            <button id="addButton3" onclick="addGuest(3)">Add Person</button>
+            <input id="remove3"> 
+            <button id="removeButton3" onclick="removeGuest(3)">Remove Person</button>
+            <button id="lockButton3" onclick="lockRoom(3)">Lock Room</button>
+            <button onclick="clearAll(3)">Remove All Guests</button>
+            </div>
+        </div>
+    </div>
+
+      <!-------------------ROOM 4------------------->
+            <div class="hotel-floor">
+        <div class="room-container">
+        <img src="room4.jpg">
+        <h3 id="h34">Room 4</h3>
+        <div id="list4">
+        </div>
+        <p id="warn4"></p>
+        
+        <div class="controls">
+            <input id="add4">
+            <button id="addButton4" onclick="addGuest(4)">Add Person</button>
+            <input id="remove4"> 
+            <button id="removeButton4" onclick="removeGuest(4)">Remove Person</button>
+            <button id="lockButton4" onclick="lockRoom(4)">Lock Room</button>
+            <button onclick="clearAll(4)">Remove All Guests</button>
+            </div>
+        </div>
+    </div>
+
+      <!-------------------ROOM 5------------------->
+            <div class="hotel-floor">
+        <div class="room-container">
+        <img src="room5.jpg">
+        <h3 id="h35">Room 5</h3>
+        <div id="list5">
+        </div>
+        <p id="warn5"></p>
+        
+        <div class="controls">
+            <input id="add5">
+            <button id="addButton5" onclick="addGuest(5)">Add Person</button>
+            <input id="remove5"> 
+            <button id="removeButton5" onclick="removeGuest(5)">Remove Person</button>
+            <button id="lockButton5" onclick="lockRoom(5)">Lock Room</button>
+            <button onclick="clearAll(5)">Remove All Guests</button>
+            </div>
+        </div>
+    </div>
+
+      <!-------------------ROOM 6------------------->
+        <div class="hotel-floor">
+        <div class="room-container">
+        <img src="room6.jpg">
+        <h3 id="h36">Room 6</h3>
+        <div id="list6">
+        </div>
+        <p id="warn6"></p>
+        
+        <div class="controls">
+            <input id="add6">
+            <button id="addButton6" onclick="addGuest(6)">Add Person</button>
+            <input id="remove6"> 
+            <button id="removeButton6" onclick="removeGuest(6)">Remove Person</button>
+            <button id="lockButton6" onclick="lockRoom(6)">Lock Room</button>
+            <button onclick="clearAll(6)">Remove All Guests</button>
+            </div>
+        </div>
+        </div>
+
+        <h3 id="h37">Check-Ins</h3>
+      <div id="archive">
+      </div>
+      <button id="clearArchive" onclick="clearArchive()">Clear Check-ins</button>
+      <h3 id="h38">Check-Outs</h3>
+      <div id="archiveOpp">
+      </div>
+      <button id="clearArchiveOpp" onclick="clearArchiveOpp()">Clear Check-outs</button>
+</body>
+</html>
