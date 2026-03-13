@@ -1,0 +1,165 @@
+/* --- Global Styles & Moving Star Background --- */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', cursive; /* Fun, eccentric fonts */
+    background: #5d2d91; /* Furchester Purple */
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px);
+    background-size: 550px 550px, 350px 350px;
+    animation: backgroundMove 60s linear infinite;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+@keyframes backgroundMove {
+    from { background-position: 0 0; }
+    to { background-position: 550px 1100px; }
+}
+
+
+/* --- Row 1: Logo --- */
+.furchester-header img {
+    width: 300px;
+    height: auto;
+    flex-shrink: 0; /* Keeps logo size consistent */
+    filter: drop-shadow(0 0 10px #ffcc00);
+    animation: wobble 3s ease-in-out infinite;
+}
+
+/* --- The Parent Container --- */
+body {
+    display: grid;
+    /* This creates the 3-column layout */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 5px; /*20*/
+    padding: 20px;
+    justify-items: center;
+    align-items: start;
+    /* Keep your existing purple/star background code here */
+}
+
+/* --- Row 1: The Header --- */
+.furchester-header {
+    /* This is the magic line: it forces the header to take up the whole row */
+    grid-column: 1 / span 3; 
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    width: 100%; /*100*/
+    margin-bottom: 5px; /* Pushes the rooms down */
+}
+
+.furchester-header h1 {
+    flex-grow: 1;
+    font-size: 3.5rem;
+    margin: 0;
+    color: #ed1c24; 
+    text-shadow: 3px 3px 0px #fff, 6px 6px 0px #000;
+}
+
+@keyframes wobble {
+    0%, 100% { transform: rotate(-5deg) scale(1); }
+    50% { transform: rotate(5deg) scale(1.1); }
+}
+
+/* --- Main Layout Grid --- */
+/* Creates the 3-column layout for the rooms */
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Force Header and Footer elements to span all 3 columns */
+img[src="logo"], h1, h3[id^="h37"], h3[id^="h38"], 
+#archive, #archiveOpp, button[id^="clear"] {
+    grid-column: span 3;
+}
+
+/* --- Room Styling (The "Hotel Floors") --- */
+.hotel-floor {
+    background: #ffcc00; /* Fun Monster Yellow */
+    border: 8px solid #f7941e;
+    border-radius: 25px;
+    padding: 15px;
+    width: 280px; /* Ensures rooms aren't too big */
+    box-shadow: 10px 10px 0px #333;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: #333;
+}
+
+.hotel-floor:hover {
+    transform: scale(1.05) rotate(2deg);
+    background: #fff1aa;
+}
+
+.room-container img {
+    width: 100%;
+    border-radius: 15px;
+    border: 3px solid #5d2d91;
+}
+
+/* --- Controls & Buttons --- */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+input {
+    width: 80%;
+    border-radius: 10px;
+    border: 2px solid #5d2d91;
+    padding: 5px;
+}
+
+button {
+    background: #ed1c24;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #a31217;
+    transition: all 0.1s;
+}
+
+button:hover {
+    background: #ff4d4d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #a31217;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 0px 0 #a31217;
+}
+
+/* --- Row 4: Check-ins & Check-outs --- */
+#archive, #archiveOpp {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    width: 80%;
+    min-height: 50px;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 4px dashed #5d2d91;
+}
+
+h3[id^="h37"], h3[id^="h38"] {
+    margin-top: 40px;
+    font-size: 2rem;
+    color: #00aeef; /* Cookie Monster Blue */
+}
